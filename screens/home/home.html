@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CineProwl</title>
+        
+        <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="../../styles/arrow.css" type="text/css" />
+        <link rel="stylesheet" href="../../styles/site.css" type="text/css" />
+        <link rel="stylesheet" href="../../styles/globalnav.css" type="text/css" />
+        
+        <link rel="stylesheet" href="home.css" type="text/css" />
+        <link rel="stylesheet" href="clock.css" type="text/css" />
+        
+    </head>
+    <body id='body' style='display:none'>
+        <img src="../../images/background-dark.jpg" class='background texture'></img>
+        <img class='background backdrop' src='{{randomMovie.backdrop}}'>
+        <section id='globalnav'>
+            <div class='selectable' id='back-button'>
+                <span class="arrow arrow-left"></span>
+            </div>            
+            <img src='../../images/logo-small.png' class='logo'>
+            <ul data-each='globalNav'>
+                <li class='selectable' id='{[id]}'>
+                    <a href='{[url]}'>{[title]}</a>
+                </li>
+            </ul>
+        </section>
+        <section id='clock'>
+            <h3>{{clock.now.day}}, {{clock.now.date}}</h3>
+            <h1>{{clock.now.time}}</h1>
+        </section>
+        <section id='home-search' class='selectable'>
+            <form>
+                <input id='searchInput' placeholder='Search movies...' value='{{searchText}}' />
+                <button type='submit'>Go</button>
+            </form>
+        </section>
+        <section id='random-title'>
+            <h1>{{randomMovie.title}}</h1>
+        </section>
+        <script>
+            require("./home");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CineProwl</title>
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../styles/arrow.css" type="text/css" />
+    <link rel="stylesheet" href="../../styles/site.css" type="text/css" />
+    <link rel="stylesheet" href="../../styles/globalnav.css" type="text/css" />
+
+    <link rel="stylesheet" href="movies.css" type="text/css" />
+</head>
+
+<body id='body'>
+    <span id='backgrounds'>
+        <img src="../../images/background-dark.jpg" class='background texture'>
+        <img class='background backdrop fade'>   
+    </span>
+    <section id='globalnav'>
+        <div class='selectable' id='back-button'>
+            <span class="arrow arrow-left"></span>
+        </div>
+        <img src='../../images/logo-small.png' class='logo'>
+        <ul data-each='globalNav'>
+            <li class='selectable' id='{[id]}'>
+                <a href='{[url]}'>{[title]}</a>
+            </li>
+        </ul>
+    </section>
+    <section id='header'>
+        <div id='context'>
+            <h2 class='filter'>{{context.message}}</h2>
+            <h3 class='page'>Page {{context.page}}</h3>
+        </div>
+ <!--        <div class='selected-item'>
+            <h1>{{activeItem.title}}</h1>
+        </div> -->
+    </section>
+    <section id='movies'>
+        <ul data-each='items'>
+            <li class='grid-item movie' id='{[id]}'>
+                <a href='{[url]}'>
+                    <img class='poster' src='{[poster]}'>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <script>
+    require("./movies");
+    </script>
+</body>
+
+</html>

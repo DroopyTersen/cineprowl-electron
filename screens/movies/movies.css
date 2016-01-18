@@ -1,0 +1,57 @@
+section#movies {
+    position: absolute;
+    right: 0;
+    height: auto;
+    width: 1400px;
+    top: 130px;
+}
+#movies ul {
+    float: right;
+    list-style: none;
+}
+
+li.grid-item.movie {
+    /* width: 200px; */
+    float: left;
+    /* height: 100%; */
+    /* position: relative; */
+}
+#movies::after { 
+   content: "";
+   display: block; 
+   clear: both;
+}
+
+.grid-item.movie a {
+    height: 390px;
+    width: 250px;
+    float: left;
+     position: relative; 
+    margin:5px;
+    opacity: .7;
+    border: 2px solid rgb(255, 187, 128);
+}
+#movies .movie .poster {
+    width: 100%;
+    height: 100%;
+}
+.grid-item.movie a:hover {
+	opacity: 1;
+}
+#context .filter {
+    font-weight: 100;
+    margin:0;
+    line-height: 1;
+}
+#context {
+    position: absolute;
+    top: 15px;
+    left: 480px;
+    width: 450px;
+}
+
+#context .page {
+    font-weight: 100;
+    margin:0;
+    margin-top: 10px;
+}

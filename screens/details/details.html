@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CineProwl</title>
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../styles/arrow.css" type="text/css" />
+    <link rel="stylesheet" href="../../styles/site.css" type="text/css" />
+    <link rel="stylesheet" href="../../styles/globalnav.css" type="text/css" />
+
+    <link rel="stylesheet" href="details.css" type="text/css" />
+</head>
+
+    <body id='body'>
+        <img src="../../images/background-dark.jpg" class='background texture'></img>
+        <img class='background backdrop' src='{{movie.backdrop}}'>
+        <section id='globalnav'>
+            <div class='selectable' id='back-button'>
+                <span class="arrow arrow-left"></span>
+            </div>
+            <img src='../../images/logo-small.png' class='logo'>
+            <ul data-each='globalNav'>
+                <li class='selectable' id='{[id]}'>
+                    <a href='{[url]}'>{[title]}</a>
+                </li>
+            </ul>
+        </section>
+        <section id='title'>
+            <h1>{{movie.title}}</h1>
+        </section>
+        <section class='play-btns'>
+            <div class='play-btn' id='play-vlc'>
+                <h1>Play</h1>
+                <p class='arrow-right'></p>
+            </div>
+            <div class='play-btn' id='play-trailer'>
+                <h1>Trailer</h1>
+                <p class='arrow-right'></p>
+            </div>
+        </section>
+
+        <section id='info'>
+            <h3 class='tagline'>{{movie.tagline}}</h3>
+            <div>
+                <span>{{movie.release_date}}</span> |
+                <span>{{movie.runtime}} minutes</span> |
+                <span>Imdb: {{movie.rating}}</span>
+            </div>
+            <p>{{movie.overview}}</p>
+        </section>
+        
+        <section id='starring'>
+            <ul data-each='movie.starring'>
+                <li>
+                    <img class='selectable' src='{[profilePic]}' id='{[id]}'/>
+                    <h3>{[name]}</h3>
+                </li>
+            </ul>
+        </section>
+    <script>
+    require("./details");
+    </script>
+</body>
+
+</html>

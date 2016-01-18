@@ -1,0 +1,111 @@
+.play-btns {
+margin: auto;
+width: 150px;
+height: 240px;
+position: relative;
+top: 387px;
+left: 20px;
+}
+.play-btn {
+    /*width: 200px;*/
+    /*height: 200px;*/
+    opacity: .7;
+    position:relative;
+    float:left;
+    z-index:1;
+}
+#play-vlc {
+margin-right: -140px;
+}
+
+.play-btn h1 {
+display: inline;
+margin: 0;
+padding: 0;
+font-size: 3em;
+color: rgba(0, 0, 0, 0.72);
+position: relative;
+top: 150px;
+left: 10px;
+text-shadow: 1px 1px 2px #FF6B00;
+display:none;
+}
+
+#play-trailer h1 {
+    font-size:2em;
+    top:140px;
+}
+#play .arrow-right {
+    position: relative;
+    left: 30px;
+}
+
+.play-btn.cursor {
+    transform: scale(1.5, 1.5);
+    opacity: 1;
+    cursor: pointer;
+    top:-87px;
+    left:20px;
+    z-index:10;
+}
+#play-trailer.cursor {
+    top:-58px;
+}
+.play-btn.cursor h1 {
+    display:inherit;
+}
+#title, #info, #starring {
+    position: fixed;
+    background: rgba(0, 0, 0, .6);
+    color: #aaa;
+    z-index: 1;
+}
+#title {
+    top: 40px;
+    right: 0px;
+    padding: 30px 40px 30px 80px;
+    text-align: right;
+}
+#title h1 {
+    font-weight: bold;
+    font-size: 3.2em;
+    margin: 0;
+}
+#info {
+    width: 600px;
+    bottom: 0;
+    margin-left: 400px;
+    padding: 10px 20px;
+    right: 0;
+    font-size: 1.55em;
+    max-height: 550px;
+}
+#starring {
+    bottom:0;
+    left: 400px;
+    padding:20px;
+}
+#starring ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#starring li {
+    float: left;
+    margin-right: 20px;
+}
+#starring li:last-child{
+    margin-right:0;
+}
+#starring h3 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+#starring img {
+    border: 4px solid #BABABA;
+}
+#starring img.cursor {
+    border-color: #FFA12C;
+    box-shadow: 0px 0px 8px #FFA12C;
+}
